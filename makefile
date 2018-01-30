@@ -1,13 +1,18 @@
-all: yacc lex compile run
+all: yacc lex compile
 
 yacc:
 	bison -y -d lab2docalc.y
 
 lex:
-	lex lab2docalc.l
+	flex lab2docalc.l
 
 compile:
 	gcc y.tab.c -o lab2docalc
 
 run:
 	./lab2docalc
+
+clean:
+	rm *.c
+	rm *.h
+	rm *.exe

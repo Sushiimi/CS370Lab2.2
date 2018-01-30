@@ -11,8 +11,8 @@
 /* 
 
     Edited by Ian Johnson -- 1-27-2018
-    Added () to 4th rule to correctly handle opening and closing
-    parenthesis in input expressions
+    Added  parenthesis() to 4th rule to correctly handle opening and closing
+    parenthesis in input expressions (made them a token)
 
 */
 

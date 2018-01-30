@@ -60,9 +60,9 @@ void yyerror (s)  /* Called by yyparse on error */
 %%	/* end specs, begin rules
 
        Edited by Ian Johnson -- 1-29-2018
-       Modified rule for handling parenthesis
-       Added rule for handling multiplication
-       Modified rule for handling multiplication
+       Modified rule for handling parenthesis (line 81-82)
+       Added rule for handling multiplication (line 89-90)
+       Modified rule for handling unary minus (line 97-98)
        
     */
 

@@ -57,7 +57,14 @@ void yyerror (s)  /* Called by yyparse on error */
 %left UMINUS
 
 
-%%	/* end specs, begin rules */
+%%	/* end specs, begin rules
+
+       Edited by Ian Johnson -- 1-29-2018
+       Modified rule for handling parenthesis
+       Added rule for handling multiplication
+       Modified rule for handling multiplication
+       
+    */
 
 list	:	/* empty */
 	|	list stat '\n'
@@ -87,7 +94,7 @@ expr	:	'(' expr ')'
 			{ $$ = $1 & $3; }
 	|	expr '|' expr
 			{ $$ = $1 | $3; }
-	|	expr '-' expr	%prec UMINUS
+	|	'-' expr	%prec UMINUS
 			{ $$ = -$2; }
 	|	VARIABLE
 			{ $$ = regs[$1]; fprintf(stderr,"found a variable value =%d\n",$1); }
